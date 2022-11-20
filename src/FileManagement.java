@@ -2,7 +2,7 @@ import java.io.*;
 import java.util.Scanner;
 
 public class FileManagement {
-    public static void CountNumOfLines(String inputFileName){
+    public void CountNumOfLines(String inputFileName){
         int count = 0;
 
         try {
@@ -28,7 +28,7 @@ public class FileManagement {
         }
     }
 
-    public static void CountNumOfWords(String inputFileName) {
+    public void CountNumOfWords(String inputFileName) {
         try{
             // create a new file object
             File file = new File(inputFileName);
@@ -49,8 +49,9 @@ public class FileManagement {
     }
 
     public static void main(String []args){
-        CountNumOfLines("input.txt");
-        CountNumOfWords("input.txt");
+        FileManagement thisObj = new FileManagement();
+        thisObj.CountNumOfLines("input.txt");
+        thisObj.CountNumOfWords("input.txt");
     }
 
 
